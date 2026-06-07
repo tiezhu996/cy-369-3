@@ -59,6 +59,71 @@ body {
   padding: clamp(24px, 5vw, 56px) 0 64px;
 }
 
+.workspace > .ant-layout {
+  background: transparent;
+}
+
+.ant-layout-sider {
+  background: transparent;
+}
+
+.ant-menu {
+  background: transparent !important;
+  border-right: none !important;
+  padding-top: 16px;
+}
+
+.ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 8px;
+}
+
+.ant-menu-item-selected {
+  background: color-mix(in srgb, #b14f3b 18%, transparent) !important;
+  color: #b14f3b !important;
+}
+
+.ant-menu-item:hover {
+  background: color-mix(in srgb, #b14f3b 10%, transparent) !important;
+}
+
+.activity-management .work-panel {
+  margin-top: 26px;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.activity-management .ant-card-head {
+  border-bottom: 1px solid color-mix(in srgb, #271d1a 13%, transparent);
+  padding: 16px 22px;
+}
+
+.activity-management .ant-card-body {
+  padding: 22px;
+}
+
+.activity-management .ant-table-thead > tr > th {
+  background: color-mix(in srgb, #ebd7ce 50%, transparent);
+  font-weight: 600;
+}
+
+.activity-management .ant-progress-bg {
+  background: linear-gradient(90deg, #3d6b72, #b14f3b);
+}
+
+.activity-management .ant-descriptions-item-label {
+  font-weight: 600;
+  color: color-mix(in srgb, #271d1a 70%, transparent);
+}
+
+.activity-management .ant-list-item {
+  border-bottom: 1px solid color-mix(in srgb, #271d1a 10%, transparent);
+}
+
+.activity-management .ant-list-item:last-child {
+  border-bottom: none;
+}
+
 .lead-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);

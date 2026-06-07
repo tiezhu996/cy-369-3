@@ -30,3 +30,49 @@ export interface OverviewResponse {
   kpis: KpiItem[];
   records: OperationRecord[];
 }
+
+export interface Activity {
+  id: string;
+  name: string;
+  description: string;
+  startTime: string;
+  endTime: string;
+  location: string;
+  maxParticipants: number;
+  fee: number;
+  status: "draft" | "published" | "ended";
+  currentParticipants: number;
+  createdAt: string;
+}
+
+export interface ActivityRegistration {
+  id: string;
+  activityId: string;
+  name: string;
+  phone: string;
+  participants: number;
+  status: "pending" | "confirmed" | "cancelled";
+  registeredAt: string;
+}
+
+export interface ActivityDetail extends Activity {
+  registrations: ActivityRegistration[];
+}
+
+export interface ActivityStats {
+  total: number;
+  published: number;
+  draft: number;
+  ended: number;
+  totalRegistrations: number;
+}
+
+export interface CreateActivityRequest {
+  name: string;
+  description: string;
+  startTime: string;
+  endTime: string;
+  location: string;
+  maxParticipants: number;
+  fee: number;
+}
